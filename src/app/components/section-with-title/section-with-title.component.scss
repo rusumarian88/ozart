@@ -1,0 +1,50 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+}
+
+.section{
+    width: 100%;
+    padding: 140px 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap: 60px;
+    @include latime;
+}
+
+.title{
+    display: block;
+    margin: auto;
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+
+}
+
+.subtitle{
+    display: block;
+    margin: auto;
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+}
+
+@media screen and (max-width:$max-width-break-point) {
+    .title{
+        font-size: 40px;
+    }
+    .subtitle{
+        font-size: 32px;
+    }
+}

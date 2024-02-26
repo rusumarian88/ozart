@@ -1,0 +1,102 @@
+<app-heder></app-heder>
+<app-section-with-title subtitle="Learn all about me in 60 seconds.">
+    <div class="video-section"></div>
+</app-section-with-title>
+<app-section-with-title title="What I Do">
+    <div class="experience-cards">
+        <app-experience-card *ngFor="let s of experienceService.skils" [title]="s.title" [description]="s.description" [button]="s.button" [icon]="s.icon" class="experience-card"></app-experience-card>
+    </div>
+        <app-indicators></app-indicators>
+</app-section-with-title>
+<app-section-with-title title="Portfolio">
+    <div class="subtitle-section">
+        <div class="texts">
+            <div class="bar-first"></div>
+            <div class="text first">All</div>
+        </div>
+        <div class="texts">
+            <div class="bar"></div>
+            <div class="text">UI & UX</div>
+        </div>
+        <div class="texts">
+            <div class="bar"></div>
+            <div class="text">Graphic Design</div>
+        </div>
+        <div class="texts">
+            <div class="bar"></div>
+            <div class="text">Web Development</div>
+        </div>
+    </div>
+    <div class="portfolios">
+    <app-portfolio-card class="portfolio-card">
+        <img class="photo" src="/assets/photo1.png">
+        <img class="photo" src="/assets/photo2.png">
+    </app-portfolio-card>
+    <app-portfolio-card class="portfolio-card">
+        <img class="photo" src="/assets/photo3.png">
+        <img class="photo" src="/assets/photo4.png">
+    </app-portfolio-card>
+    <app-portfolio-card class="portfolio-card">
+        <img class="photo" src="/assets/photo5.png">
+        <img class="photo" src="/assets/photo6.png">
+    </app-portfolio-card>
+    <app-portfolio-card class="portfolio-card-small">
+        <img class="photo" src="/assets/photo1b.png">
+        <img class="photo" src="/assets/photo2b.png">
+    </app-portfolio-card>
+    <app-portfolio-card class="portfolio-card-small">
+        <img class="photo" src="/assets/photo3b.png">
+        <img class="photo" src="/assets/photo4b.png">
+    </app-portfolio-card>
+    <app-portfolio-card class="portfolio-card-small">
+        <img class="photo" src="/assets/photo5b.png">
+        <img class="photo" src="/assets/photo6b.png">
+    </app-portfolio-card>
+    </div>
+    <app-indicators></app-indicators>
+</app-section-with-title>
+<app-section-with-title title="Client Testimonial">
+    <div class="content-testimonial">
+        <div class="img-testimonial"></div>
+        <div class="testimonial">
+            <img class="icon-testimonial" src="/assets/icon-testimonial1.png">
+            <div class="opinion">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete</div>
+            <img class="icon-testimonial second" src="/assets/icon-testimonial2.png">
+            <div class="person">
+                <div class="name">Jared Warner</div>
+                <div class="function">CEO Of Zeo</div>
+            </div>
+        </div>
+    </div>
+    <app-indicators></app-indicators>
+</app-section-with-title>
+<app-section class="se" bg="rgba(54, 52, 52, 1)">
+    <div class="hello-sec">
+        <div class="subt-tit">
+            <div class="subtitle">Get in touch</div>
+            <div class="title">Just Say Hello</div>
+        </div>
+        <div class="button">Contact</div>
+        <div class="social-media">
+            <img class="icon-sec" src="/assets/icon-sec1.png">
+            <img class="icon-sec" src="/assets/icon-sec2.png">
+            <img class="icon-sec" src="/assets/icon-sec3.png">
+            <img class="icon-sec" src="/assets/icon-sec4.png">
+            <img class="icon-sec" src="/assets/icon-sec5.png">
+        </div>
+    </div>
+</app-section>
+<app-section bgContent="/assets/bg-project.png">
+    <div class="projects-cards">
+        <app-project-card *ngFor="let p of projectsService.projects" [title]="p.title" [info]="p.info" class="project-card"></app-project-card>
+    </div>
+</app-section>
+<app-section-with-title title="My Blog">
+    <div class="blog-cards">
+        <app-blog-card *ngFor="let b of blogService.blogs" [photo]="b.photo" [comments]="b.comments" [likes]="b.likes" [name]="b.name" [title]="b.title" [button]="b.button" [icon]="b.icon" class="blog-card"></app-blog-card>
+    </div>
+        <app-indicators></app-indicators>
+</app-section-with-title>
+<app-footer></app-footer>
+
+

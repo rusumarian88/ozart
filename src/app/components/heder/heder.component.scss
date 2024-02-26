@@ -1,0 +1,190 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+}
+
+.heder{
+    position: relative;
+    padding: 200px 0 100px;
+}
+
+.bar{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+}
+
+.content{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:flex-start;
+    gap:56px;
+    @include latime;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items:flex-start;
+    gap: 20px;
+    flex-grow:1;
+    flex-basis:1px;
+}
+
+.line{
+    display: inline-block;
+    height: 4px;
+    width: 48px;
+    background-color: rgba(51, 51, 51, 1);
+    margin-right: 12px;
+    vertical-align:text-top;
+}
+
+.text{
+    display: inline-block;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 700;
+    color: rgba(51, 51, 51, 1);
+    font-family: 'Ubuntu',sans-serif;
+}
+
+.title{
+    font-size: 74px;
+    line-height: 88px;
+    font-weight: 700;
+    color:rgba(51, 51, 51, 1)
+}
+
+.first-word{
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.description{
+    font-size: 40px;
+    line-height: 47px;
+    flex-grow: 400;
+    color:rgba(51, 51, 51, 1) ;
+}
+
+.info{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+}
+
+.image-heder{
+    width: 550px;
+    height: 640px;
+    background-image: url("/assets/image-heder.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    align-items: stretch;
+    @include latime;
+    margin-top: 56px;
+}
+
+.fake-elm{
+    width: 100px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items:flex-start;
+    gap:32px;
+}
+
+.icon{
+    height: 20px;
+    cursor: pointer;
+}
+
+.scroll{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:12px;
+}
+
+.txt{
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 300;
+    color: rgba(51, 51, 51, 1);
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:1439px){
+    .image-heder{
+        height:473px;
+        width: 434px;
+
+    }
+}
+
+@media screen and (max-width:1151px){
+    .image-heder{
+        background-image: url("/assets/image-heder2.png");
+        width:100%;
+    }
+    .content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .scroll,.fake-elm{
+        display:none
+    } 
+    .social-media{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:$max-width-break-point) {
+    .heder{
+        padding-top: 140px;
+    }
+    .content{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .line{
+        vertical-align: super;
+    }
+    .text{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .title{
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .description,.info{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .image-heder{
+        height: 280px;
+    }  
+}

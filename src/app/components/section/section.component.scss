@@ -1,0 +1,17 @@
+
+@import "mixins";
+@import "variables";
+
+
+:host{
+    display: block;
+}
+
+.section{
+    width: 100%;
+    padding: 100px 0;
+}
+
+.content{
+    @include latime;
+}
